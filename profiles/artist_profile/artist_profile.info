@@ -1,0 +1,101 @@
+ name  = Artist Profile
+ core  = 7.x
+
+;theme = artistbase
+
+
+; -----------------------------------------------------------------------------
+;                                  Modules
+; -----------------------------------------------------------------------------
+; List the modules (core, contrib and/or features) to be enabled in the
+; ;dependencies[] array. Any ;dependencies of the listed modules will be detected
+; and enabled automatically.
+; -----------------------------------------------------------------------------
+
+
+; Core
+ 
+ dependencies[] = block
+ dependencies[] = comment
+ dependencies[] = contextual
+ dependencies[] = dblog
+ dependencies[] = field_ui
+ dependencies[] = file
+ dependencies[] = help
+ dependencies[] = image
+ dependencies[] = list
+ dependencies[] = menu
+ dependencies[] = number
+ dependencies[] = options
+ dependencies[] = overlay
+ dependencies[] = path
+ dependencies[] = rdf
+ dependencies[] = shortcut
+ dependencies[] = taxonomy
+ dependencies[] = toolbar
+
+; Contrib
+
+ dependencies[] = ctools
+ dependencies[] = eva
+ dependencies[] = features
+ dependencies[] = mediaelement
+ dependencies[] = media_vimeo
+ dependencies[] = multiselect
+ dependencies[] = strongarm
+
+; Features
+
+ dependencies[] = basic_page
+ dependencies[] = discography 
+ dependencies[] = events
+ dependencies[] = base_feature
+ dependencies[] = wysiwyg
+ dependencies[] = news
+ dependencies[] = photos 
+ dependencies[] = views_feature 
+ dependencies[] = videos
+
+; Variables
+
+ variables[admin_theme]                     = seven
+ variables[block_cache]                     = 1
+ variables[configurable_timezones]          = '0'
+ variables[date_default_timezone]           = 'America/Chicago'
+ variables[error_level]                     = 0
+;variables[maintenance_theme]               = 'maintenance'
+ variables[node_admin_theme]                = 1
+ variables[page_compression]                = 0
+ variables[pathauto_node_pattern]           = [node:title]
+ variables[site_default_country]            = US
+ variables[site_mail]                       = sysadmin@evanwillhite.com
+;variables[theme_default]                   = 'artistbase'
+ variables[update_check_frequency]          = "7"
+ variables[update_notification_threshold]   = "security"
+ variables[update_notify_emails][0]         = sysadmin@evanwillhite.com
+
+; -----------------------------------------------------------------------------
+;                                  Default Users
+; -----------------------------------------------------------------------------
+
+ users[evan][uid]       = 2
+ users[evan][name]      = evan
+ users[evan][mail]      = evan@evanwillhite.com
+ users[evan][roles]     = developer
+ users[evan][status]    = 1
+ 
+ users[client][uid]       = 3
+ users[client][name]      = client
+ users[client][mail]      = client@evanwillhite.com
+ users[client][roles]     = client
+ users[client][status]    = 1
+ 
+; -----------------------------------------------------------------------------
+;                                  Nodes
+; -----------------------------------------------------------------------------
+; Add home page for custom sites.
+; -----------------------------------------------------------------------------
+ 
+ nodes[front][type]  = page
+ nodes[front][title] = Home
+ nodes[front][uid]   = 1
