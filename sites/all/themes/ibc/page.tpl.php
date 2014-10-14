@@ -66,32 +66,32 @@
  * @see template_process()
  */
 ?>
-
+<meta property="og:image" content="/sites/all/themes/ibc/images/church.jpeg" />
   <div id="page-wrapper"><div id="page">
 	<div id="wrapper">
 	    <div id="header" class="container_12 clearfix">
-	
+
 	      <?php if ($logo): ?>
 	        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
 	          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
 	        </a>
 	      <?php endif; ?>
-	
+
 	      <?php print render($page['header']); ?>
-	
+
 	    </div> <!-- #header -->
 	    <div id="header-btm"></div>
-	
+
 	    <?php print $messages; ?>
-	
+
 	    <div id="main" class="container_12 clearfix">
-	    
+
 	      <?php if ($page['sidebar_first']): ?>
 	        <div id="sidebar-first" class="column sidebar grid_3"><div class="section">
 	          <?php print render($page['sidebar_first']); ?>
 	        </div></div> <!-- /.section, /#sidebar-first -->
 	      <?php endif; ?>
-	    
+
 	      <div id="content" class="<?php if ($page['sidebar_first']) { ?>grid_9<?php } else { ?>grid_12<?php } ?>">
 	        <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
 	        <?php if ($breadcrumb): ?>
@@ -106,10 +106,10 @@
 	        <?php print render($page['content']); ?>
 	        <?php print $feed_icons; ?>
 	      </div> <!-- #content -->
-	
+
 	    </div><!-- #main -->
 	    <div id="main-btm"></div>
-	
+
 	    <div id="footer" class="container_12 clearfix">
 	      <?php print render($page['footer']); ?>
 	    </div> <!-- #footer -->
